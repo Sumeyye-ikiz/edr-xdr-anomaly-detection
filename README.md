@@ -45,9 +45,8 @@ Proje geliştirme sürecinde adım adım kaydedilen performans ve stabilizasyon 
 | **V6 (Nihai)** | Outlier temizliği + EarlyStop | Hata farkı **41.5 katına** çıktı, F1-Score %99'a ulaştı |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sumeyye-ikiz/edr-xdr-anomaly-detection/main/Ekran%20Resmi%202026-11-06%2023.50.35.png" alt="Eğitim, Hata Dağılımı, Confusion Matrix ve Accuracy" width="800">
+  <img src="Eğitim_HataDağılımı_ConfusionMatrix_Accuracy.png" alt="Eğitim, Hata Dağılımı, Confusion Matrix ve Accuracy" width="800">
 </p>
-
 ---
 
 ## 🎯 Performans & Değerlendirme
@@ -60,6 +59,6 @@ SOC/EDR operasyonlarında saldırıyı kaçırmanın (False Negative) maliyeti y
 * **Genel Doğruluk (Accuracy):** `%97`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sumeyye-ikiz/edr-xdr-anomaly-detection/main/Ekran%20Resmi%202026-11-06%2023.51.21.png" alt="ROC Eğrisi" width="400">
-  <img src="https://raw.githubusercontent.com/sumeyye-ikiz/edr-xdr-anomaly-detection/main/Ekran%20Resmi%202026-11-06%2023.50.56.png" alt="Nihai Model Metrikleri" width="400">
+  <img src="ROC_Egrisi.png" alt="ROC Eğrisi" width="400">
+  <img src="Nihai_Model_Metrikleri.png" alt="Nihai Model Metrikleri" width="400">
 </p>
