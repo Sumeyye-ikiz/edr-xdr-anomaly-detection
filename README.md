@@ -45,7 +45,7 @@ Proje geliştirme sürecinde adım adım kaydedilen performans ve stabilizasyon 
 | **V6 (Nihai)** | Outlier temizliği + EarlyStop | Hata farkı **41.5 katına** çıktı, F1-Score %99'a ulaştı |
 
 <p align="center">
-  <img src="Egitim_HataDagılımı_ConfusionMatrix_Accuracy.png" alt="Eğitim, Hata Dağılımı, Confusion Matrix ve Accuracy" width="800">
+  <img src="Egitim_HataDagilimi_ConfusionMatrix_Accuracy.png" alt="Eğitim, Hata Dağılımı, Confusion Matrix ve Accuracy" width="800">
 </p>
 ---
 
