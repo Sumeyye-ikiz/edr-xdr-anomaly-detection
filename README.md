@@ -14,7 +14,7 @@ Model, **yalnızca benign (normal) ağ trafiği dizileri** kullanılarak eğitil
 
 ---
 
-## 📊 Veri Seti & Ön İşleme
+## 📊 Veri Seti, Ön İşleme ve Outlier Mühendisliği
 
 * **Veri Kaynağı:** CICIDS2018 (`Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv`)
 * **Sınıf Dağılımı:**
@@ -23,7 +23,7 @@ Model, **yalnızca benign (normal) ağ trafiği dizileri** kullanılarak eğitil
   * FTP-BruteForce: `193.354` (~%18)
   * SSH-Bruteforce: `187.589` (~%18)
 * **Dizi Oluşturma (Sliding Window):** Toplam `100.615` dizi (Shape: `10 × 77`)
-* **Outlier Mühendisliği:** Sıfıra yakın süreye bölme kaynaklı sütunlardaki aşırı uç değerler, tüm sayısal sütunlara **%99 persentil kırpma (clipping)** uygulanarak dengelenmiştir.
+* **Outlier (Aykırı Değer) Mühendisliği:** Sıfıra yakın süreye bölme kaynaklı sütunlardaki (`Flow Byts/s`, `TotLen Fwd Pkts` vb.) aşırı uç değerler, matematiksel patlamaları önlemek amacıyla tüm sayısal sütunlara **%99 persentil kırpma (clipping)** uygulanarak dengelenmiş ve model stabilizasyonu sağlanmıştır.
 
 ---
 
@@ -44,9 +44,12 @@ Proje geliştirme sürecinde adım adım kaydedilen performans ve stabilizasyon 
 | **V3 (tanh)** | Aktivasyon Değişimi | `val_loss` stabilize oldu, hata farkı 7.16 katına çıktı |
 | **V6 (Nihai)** | Outlier temizliği + EarlyStop | Hata farkı **41.5 katına** çıktı, F1-Score %99'a ulaştı |
 
+<br>
 <p align="center">
   <img src="Egitim_HataDagilimi_ConfusionMatrix_Accuracy.png" alt="Eğitim, Hata Dağılımı, Confusion Matrix ve Accuracy" width="800">
 </p>
+<br>
+
 ---
 
 ## 🎯 Performans & Değerlendirme
@@ -58,6 +61,7 @@ SOC/EDR operasyonlarında saldırıyı kaçırmanın (False Negative) maliyeti y
 * **Benign Recall:** `%90` (Yanlış Alarm Oranı: %10)
 * **Genel Doğruluk (Accuracy):** `%97`
 
+<br>
 <p align="center">
   <img src="ROC_Egrisi.png" alt="ROC Eğrisi" width="400">
   <img src="Nihai_Model_Metrikleri.png" alt="Nihai Model Metrikleri" width="400">
